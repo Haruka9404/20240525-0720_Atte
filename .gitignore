@@ -13,4 +13,4 @@
 /src/yarn-error.log
 /src/.idea
 /src/.vscode
-/docker/mysql/data
+/docker/mysql/data/*
