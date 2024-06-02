@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TimeStampController;
+use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login', [AuthenticatedSessionController::class, 'login']);
+Route::get('/register', [RegisteredUserController::class, 'register']);
+Route::post('/logout', [AttendanceController::class, 'destroy']);
+
+Route::middleware('auth')->group(function () {
+Route::get('/index', [TimeStampController::class, 'index']);
+Route::get('/attendance', [AttendanceController::class, 'attendance']);
 });

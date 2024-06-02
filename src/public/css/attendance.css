@@ -1,0 +1,35 @@
+.content {
+    padding-top: 40px;
+    height: 100vh;
+}
+
+.attendance__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.attendance-table {
+    margin: 30px auto;
+    width: 90%;
+    text-align: center;
+}
+
+.attendance-table__inner {
+    width: 100%;
+    border-top: 1px solid #999;
+}
+
+.attendance-table__row {
+    border-bottom: 1px solid #999;
+}
+
+.attendance-table__header {
+    padding: 17px;
+    width: 20%;
+    font-weight: bold;
+}
+
+.attendance-table__item {
+    padding: 17px;
+    width: 20%;
+}
