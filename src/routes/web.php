@@ -17,11 +17,11 @@ use App\Http\Controllers\RegisteredUserController;
 |
 */
 
-Route::get('/login', [AuthenticatedSessionController::class, 'login']);
+Route::get('/', [AuthenticatedSessionController::class, 'login']);
 Route::get('/register', [RegisteredUserController::class, 'register']);
-Route::post('/logout', [AttendanceController::class, 'destroy']);
 
 Route::middleware('auth')->group(function () {
 Route::get('/index', [TimeStampController::class, 'index']);
 Route::get('/attendance', [AttendanceController::class, 'attendance']);
 });
+

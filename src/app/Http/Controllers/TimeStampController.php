@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class TimeStampController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('index');
+        $contact = $request->only(['email']);
+        return view('index', ['contact' => $contact]);
     }
 }

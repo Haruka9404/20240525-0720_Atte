@@ -19,21 +19,21 @@
         @csrf
         <div class="content-form__user">
             <div class="content-form__user__name">
-                <input type="text" name="name" placeholder="名前" />
+                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}" />
             </div>
             <div class="form__error">
-            @error('name')
-                {{ $message }}
-            @enderror
+            @if ($errors->has('name'))
+            {{$errors->first('name')}}
+            @endif
             </div>
 
             <div class="content-form__user__email">
-                <input type="email" name="email" placeholder="メールアドレス" />
+                <input type="email" name="email" placeholder="メールアドレス" value="{{ old('email') }}" />
             </div>
             <div class="form__error">
-            @error('email')
-                {{ $message }}
-            @enderror
+            @if ($errors->has('email'))
+            {{$errors->first('email')}}
+            @endif
             </div>
 
             <div class="content-form__user__password">
@@ -41,13 +41,18 @@
                 {{-- ここのTypeまたはnameはテーブルのカラム名と一緒がいい？ --}}
             </div>
             <div class="form__error">
-            @error('password')
-                {{ $message }}
-            @enderror
+            @if ($errors->has('password'))
+            {{$errors->first('passwore')}}
+            @endif
             </div>
 
             <div class="content-form__user__password-confirmation">
                 <input type="password" name="password_confirmation" placeholder="確認用パスワード" />
+            </div>
+            <div class="form__error">
+            @if ($errors->has('password_confirmation'))
+            {{$errors->first('password_confirmation')}}
+            @endif
             </div>
 
         </div>

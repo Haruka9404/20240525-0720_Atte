@@ -23,9 +23,9 @@
                 <input type="email" name="email" placeholder="メールアドレス" value="{{ old('email') }}" />
             </div>
             <div class="form__error">
-            @error('email')
-                {{ $message }}
-            @enderror
+            @if ($errors->has('email'))
+            {{$errors->first('email')}}
+            @endif
             </div>
 
             <div class="content-form__user__password">
@@ -33,9 +33,9 @@
                 <input type="password" name="password" placeholder="パスワード" />
             </div>
             <div class="form__error">
-            @error('password')
-                {{ $message }}
-            @enderror
+            @if ($errors->has('password'))
+            {{$errors->first('password')}}
+            @endif
             </div>
         </div>
 

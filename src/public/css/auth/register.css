@@ -1,6 +1,6 @@
 .content {
     padding-top: 30px;
-    height: 100vh;
+    height: 150vh;
 }
 
 .content-title {
@@ -43,8 +43,10 @@
 
 .content-login__text {
     color: #999999;
+    padding: 10px;
 }
 
 .content-login__link {
     text-decoration: none;
+    font-size: 15px;
 }
