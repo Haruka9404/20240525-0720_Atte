@@ -38,11 +38,10 @@
 
             <div class="content-form__user__password">
                 <input type="password" name="password" placeholder="パスワード" />
-                {{-- ここのTypeまたはnameはテーブルのカラム名と一緒がいい？ --}}
             </div>
             <div class="form__error">
             @if ($errors->has('password'))
-            {{$errors->first('passwore')}}
+            {{$errors->first('password')}}
             @endif
             </div>
 

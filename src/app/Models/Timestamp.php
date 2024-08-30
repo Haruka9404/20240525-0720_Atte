@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Timestamp extends Model
 {
-    use HasFactory;
+    protected $fillable = ['user_id', 'attendance_start', 'attendance_end'];
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

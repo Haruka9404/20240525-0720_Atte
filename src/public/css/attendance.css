@@ -17,6 +17,7 @@
 .attendance-table__inner {
     width: 100%;
     border-top: 1px solid #999;
+    margin-bottom: 15px;
 }
 
 .attendance-table__row {

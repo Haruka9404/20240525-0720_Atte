@@ -19,7 +19,6 @@
         @csrf
         <div class="content-form__user">
             <div class="content-form__user__email">
-                <!--バリデーション機能を実装したら記述します。-->
                 <input type="email" name="email" placeholder="メールアドレス" value="{{ old('email') }}" />
             </div>
             <div class="form__error">
@@ -29,7 +28,6 @@
             </div>
 
             <div class="content-form__user__password">
-            <!--バリデーション機能を実装したら記述します。-->
                 <input type="password" name="password" placeholder="パスワード" />
             </div>
             <div class="form__error">

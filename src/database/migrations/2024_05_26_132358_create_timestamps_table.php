@@ -16,9 +16,9 @@ class CreateTimestampsTable extends Migration
         Schema::create('timestamps', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->date('date')->nullable();
             $table->dateTime('attendance_start');
-            $table->dateTime('attendance_end');
-            $table->foreignId('resttime_id')->constrained()->cascadeOnDelete();;
+            $table->dateTime('attendance_end')->nullable();
             $table->timestamps();
         });
     }
