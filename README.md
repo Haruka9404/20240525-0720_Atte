@@ -1,6 +1,8 @@
 ## 作成したアプリケーション
 Atte
-スクリーンショット 2024-08-30 21.28.02.png
+
+![image](https://github.com/user-attachments/assets/7774bc49-ee04-4471-9d7d-5db51b508487)
+
 
 ## 作成した目的
 勤怠管理システム
